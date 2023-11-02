@@ -23,6 +23,6 @@ if (isset($_POST['opslaan'])) { // Controleer of het "opslaan" knop is ingedrukt
 
     // Voeg de gegevens toe aan de database
     mysqli_query($conn, "INSERT INTO cursusdagen (begintijd, eindtijd) VALUES ('$begintijd', '$eindtijd')");
-    header("location: ?pagina=beheren_cursus_dagen");
+    header("location: ?pagina=beherenCursusDagen");
 }
 ?>

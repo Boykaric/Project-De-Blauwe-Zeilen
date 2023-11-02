@@ -10,7 +10,7 @@ $result->fetch_assoc();
     <div class="container">
         <h1> BOTEN OVERZICHT </h1>
 
-        <a href="?pagina=boot_toevoegen" class="btn btn-success mb-4 mt-4"> Toevoegen </a>
+        <a href="?pagina=bootToevoegen" class="btn btn-success mb-4 mt-4"> Toevoegen </a>
         <table class="table table_boten table-striped">
             <thead class="header_boten">
                 <tr class="header_row_boten text-center">
@@ -46,8 +46,8 @@ $result->fetch_assoc();
                     echo "</td>";
                     echo "<td>" . $row['opmerking'] . "</td>";
                     echo "<td>
-                    <a class='btn btn-warning p3' href='?pagina=boot_aanpassen&id=" . $row['id'] . "'> Edit </a>
-                    <a class='btn btn-danger' href='?pagina=boot_verwijderen&id=" . $row['id'] . "'> Delete </a> </td>";
+                    <a class='btn btn-warning p3' href='?pagina=bootAanpassen&id=" . $row['id'] . "'> Edit </a>
+                    <a class='btn btn-danger' href='?pagina=bootVerwijderen&id=" . $row['id'] . "'> Delete </a> </td>";
                     echo "</tr>";
                 };
                 ?>

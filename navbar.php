@@ -15,7 +15,7 @@
             Beheren
           </button>
           <ul class="dropdown-menu">
-            <li><a class="nav-link" href="?pagina=beheren_cursus_dagen"> Cursus Dagen</a></li>
+            <li><a class="nav-link" href="?pagina=beherenCursusDagen"> Cursus Dagen</a></li>
             <li><a class="nav-link" href="?pagina=boten">Boten</a></li>
           </ul>
         </div>

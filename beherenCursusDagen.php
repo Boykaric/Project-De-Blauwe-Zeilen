@@ -10,7 +10,7 @@ $result->fetch_assoc();
     <div class="container">
         <h1> CURSUSDAGEN OVERZICHT </h1>
 
-        <a href="?pagina=cursusdag_toevoegen" class="btn btn-success mb-4 mt-4"> Toevoegen </a>
+        <a href="?pagina=cursusdagToevoegen" class="btn btn-success mb-4 mt-4"> Toevoegen </a>
         <table class="table table_boten table-striped">
             <thead class="header_boten">
                 <tr class="header_row_boten text-center">
@@ -30,8 +30,8 @@ $result->fetch_assoc();
                     echo "<td>" . $row['begintijd'] . "</td>";
                     echo "<td>" . $row['eindtijd'] . "</td>";
                     echo "<td>
-                    <a class='btn btn-warning p3' href='?pagina=cursusdag_aanpassen&id=" . $row['id'] . "'> Edit </a>
-                    <a class='btn btn-danger' href='?pagina=cursusdag_verwijderen&id=" . $row['id'] . "'> Delete </a> </td>";
+                    <a class='btn btn-warning p3' href='?pagina=cursusdagAanpassen&id=" . $row['id'] . "'> Edit </a>
+                    <a class='btn btn-danger' href='?pagina=cursusdagVerwijderen&id=" . $row['id'] . "'> Delete </a> </td>";
                     echo "</tr>";
                 };
                 ?>

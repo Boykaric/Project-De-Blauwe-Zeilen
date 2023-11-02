@@ -23,25 +23,25 @@
         require('boten.php');
         break;
       case 'boot_toevoegen':
-        require('boot_toevoegen.php');
+        require('bootToevoegen.php');
         break;
       case 'boot_aanpassen':
-        require('boot_aanpassen.php');
+        require('bootAanpassen.php');
         break;
       case 'boot_verwijderen':
-        require('boot_verwijderen.php');
+        require('bootVerwijderen.php');
         break;
-      case 'beheren_cursus_dagen':
-        require('beheren_cursus_dagen.php');
+      case 'beherenCursusDagen':
+        require('beherenCursusDagen.php');
         break;
-      case 'cursusdag_toevoegen':
-        require('cursusdag_toevoegen.php');
+      case 'cursusdagToevoegen':
+        require('cursusdagToevoegen.php');
         break;
-      case 'cursusdag_verwijderen':
-        require('cursusdag_verwijderen.php');
+      case 'cursusdagVerwijderen':
+        require('cursusdagVerwijderen.php');
         break;
-      case 'cursusdag_aanpassen':
-        require('cursusdag_aanpassen.php');
+      case 'cursusdagAanpassen':
+        require('cursusdagAanpassen.php');
         break;
     }
   } else {
