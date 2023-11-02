@@ -37,6 +37,12 @@
       case 'cursusdag_toevoegen':
         require('cursusdag_toevoegen.php');
         break;
+      case 'cursusdag_verwijderen':
+        require('cursusdag_verwijderen.php');
+        break;
+      case 'cursusdag_aanpassen':
+        require('cursusdag_aanpassen.php');
+        break;
     }
   } else {
     $_GET['pagina'] = 'home';

@@ -30,8 +30,8 @@ $result->fetch_assoc();
                     echo "<td>" . $row['begintijd'] . "</td>";
                     echo "<td>" . $row['eindtijd'] . "</td>";
                     echo "<td>
-                    <a class='btn btn-warning p3' href='?pagina=boot_aanpassen&id=" . $row['id'] . "'> Edit </a>
-                    <a class='btn btn-danger' href='?pagina=boot_verwijderen&id=" . $row['id'] . "'> Delete </a> </td>";
+                    <a class='btn btn-warning p3' href='?pagina=cursusdag_aanpassen&id=" . $row['id'] . "'> Edit </a>
+                    <a class='btn btn-danger' href='?pagina=cursusdag_verwijderen&id=" . $row['id'] . "'> Delete </a> </td>";
                     echo "</tr>";
                 };
                 ?>
