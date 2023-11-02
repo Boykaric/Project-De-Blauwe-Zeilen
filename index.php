@@ -34,6 +34,9 @@
       case 'beheren_cursus_dagen':
         require('beheren_cursus_dagen.php');
         break;
+      case 'cursusdag_toevoegen':
+        require('cursusdag_toevoegen.php');
+        break;
     }
   } else {
     $_GET['pagina'] = 'home';

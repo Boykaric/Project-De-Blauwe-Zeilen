@@ -1,30 +1,28 @@
 <div class="container">
 
-    <h1> Boot Toevoegen </h1>
+    <h1> Cursus Dag Toevoegen </h1>
     <form method="post">
         <div class="form-group">
             <label for="begintijd">Begin Tijd:</label>
-            <input type="date" class="form-control" id="begintijd" name="begintijd">
+            <input type="datetime-local" class="form-control" id="begintijd" name="begintijd">
         </div>
         <div class="form-group">
             <label for="eindtijd">Eind Tijd:</label>
-            <input type="date" class="form-control" id="eindtijd" name="eindtijd">
+            <input type="datetime-local" class="form-control" id="eindtijd" name="eindtijd">
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="Opslaan" name="opslaan">
         </div>
 </div>
 
 
 <?php
-// if (isset($_POST['opslaan'])) { // Controleer of het "opslaan" knop is ingedrukt
-//     $naam = $_POST['naam'];
-//     $minpassagiers = $_POST['minpassagiers'];
-//     $maxpassagiers = $_POST['maxpassagiers'];
-//     $grootte = $_POST['grootte'];
-//     $niveau = $_POST['niveau'];
-//     $beschikbaarheid = $_POST['beschikbaarheid'];
-//     $opmerking = $_POST['opmerking'];
+if (isset($_POST['opslaan'])) { // Controleer of het "opslaan" knop is ingedrukt
+    $begintijd = $_POST['begintijd'];
+    $eindtijd = $_POST['eindtijd'];
 
-//     // Voeg de gegevens toe aan de database
-//     mysqli_query($conn, "INSERT INTO boten (naam, minpassagiers, maxpassagiers, grootte, niveau, beschikbaarheid, opmerking) VALUES ('$naam', '$minpassagiers', '$maxpassagiers', '$grootte', '$niveau', '$beschikbaarheid', '$opmerking')");
-//     header("location: ?pagina=boten");
-// }
+    // Voeg de gegevens toe aan de database
+    mysqli_query($conn, "INSERT INTO cursusdagen (begintijd, eindtijd) VALUES ('$begintijd', '$eindtijd')");
+    header("location: ?pagina=beheren_cursus_dagen");
+}
 ?>

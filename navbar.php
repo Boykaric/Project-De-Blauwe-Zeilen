@@ -10,13 +10,13 @@
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="?pagina=home">Home</a>
         <a class="nav-link" href="#">Over ons</a>
-        <a class="nav-link" href="?pagina=boten">Boten</a>
         <div class="dropdown mt-4">
           <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Beheren
           </button>
           <ul class="dropdown-menu">
             <li><a class="nav-link" href="?pagina=beheren_cursus_dagen"> Cursus Dagen</a></li>
+            <li><a class="nav-link" href="?pagina=boten">Boten</a></li>
           </ul>
         </div>
       </div>
