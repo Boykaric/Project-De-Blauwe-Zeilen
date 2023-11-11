@@ -8,9 +8,8 @@ $result->fetch_assoc();
 <body>
 
     <div class="container">
-        <h1> CURSUSDAGEN OVERZICHT </h1>
-
-        <a href="?pagina=cursusdagToevoegen" class="btn btn-success mb-4 mt-4"> Toevoegen </a>
+        <h1> CURSUSTIJDEN OVERZICHT </h1>
+        <a href="?pagina=cursustijdToevoegen" class="btn btn-success mb-4 mt-4">Cursus Tijd Toevoegen </a>
         <table class="table table_boten table-striped">
             <thead class="header_boten">
                 <tr class="header_row_boten text-center">
@@ -30,8 +29,8 @@ $result->fetch_assoc();
                     echo "<td>" . $row['begintijd'] . "</td>";
                     echo "<td>" . $row['eindtijd'] . "</td>";
                     echo "<td>
-                    <a class='btn btn-warning p3' href='?pagina=cursusdagAanpassen&id=" . $row['id'] . "'> Edit </a>
-                    <a class='btn btn-danger' href='?pagina=cursusdagVerwijderen&id=" . $row['id'] . "'> Delete </a> </td>";
+                    <a class='btn btn-warning p3' href='?pagina=cursustijdAanpassen&id=" . $row['id'] . "'> Edit </a>
+                    <a class='btn btn-danger' href='?pagina=cursustijdVerwijderen&id=" . $row['id'] . "'> Delete </a> </td>";
                     echo "</tr>";
                 };
                 ?>

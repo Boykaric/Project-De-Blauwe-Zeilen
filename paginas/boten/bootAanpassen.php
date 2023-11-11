@@ -25,7 +25,7 @@ foreach ($result as $row) {
                 <input type="text" class="form-control" id="grootte" name="grootte" value="<?= $row['grootte']; ?>">
             </div>
             <div class="form-group">
-                <label for="niveau">Type moeilijkheid:</label>
+                <label for="niveau">Niveau:</label>
                 <select class="form-group" id="niveau" name="niveau">
                     <option <?php if($row['niveau'] == "Beginner"){echo "selected";}; ?> value="Beginner"> Beginner </option>
                     <option <?php if($row['niveau'] == "Gevorderd"){echo "selected";}; ?> value="Gevorderd"> Gevorderd </option>
@@ -44,6 +44,7 @@ foreach ($result as $row) {
                 <textarea class="form-control" id="opmerking" rows="3" name="opmerking"><?= $row['opmerking']; ?></textarea>
             </div>
             <input type="submit" class="btn btn-primary" value="Opslaan" name="opslaan">
+            <input type="submit" class="btn btn-primary" value="Terug" name="terug">
         </form>
     </div>
 <?php
@@ -52,17 +53,20 @@ foreach ($result as $row) {
 
 
 if (isset($_POST['opslaan'])) { // Controleer of het "opslaan" knop is ingedrukt
-    $naam = $_POST['naam'];
-    $minpassagiers = $_POST['minpassagiers'];
-    $maxpassagiers = $_POST['maxpassagiers'];
-    $grootte = $_POST['grootte'];
-    $type = $_POST['type'];
-    $beschikbaarheid = $_POST['beschikbaarheid'];
-    $opmerking = $_POST['opmerking'];
+        // Code specifiek voor de "Opslaan" knop
+        $naam = $_POST['naam'];
+        $minpassagiers = $_POST['minpassagiers'];
+        $maxpassagiers = $_POST['maxpassagiers'];
+        $grootte = $_POST['grootte'];
+        $niveau = $_POST['niveau'];
+        $beschikbaarheid = $_POST['beschikbaarheid'];
+        $opmerking = $_POST['opmerking'];
 
-    // Update de de boot waar de ID, de ID is van de boot die je hebt aangeklikt
-    mysqli_query($conn, "UPDATE `boten` SET `naam`= '$naam',`minpassagiers`='$minpassagiers',`maxpassagiers`='$maxpassagiers',`grootte`='$grootte',`type`='$type',`beschikbaarheid`='$beschikbaarheid',`opmerking`='$opmerking' WHERE id =" . $_GET['id']);
-    header("location: ?pagina=boten");
+        // Update de boot waar de ID, de ID is van de boot die je hebt aangeklikt
+        mysqli_query($conn, "UPDATE `boten` SET `naam`= '$naam',`minpassagiers`='$minpassagiers',`maxpassagiers`='$maxpassagiers',`grootte`='$grootte',`niveau`='$niveau',`beschikbaarheid`='$beschikbaarheid',`opmerking`='$opmerking' WHERE id =" . $_GET['id']);
+
+        // Na het opslaan doorverwijzen
+        header("location: ?pagina=boten");
+        exit();
 }
-
 ?>

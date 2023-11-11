@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
   <title>DBZ</title>
 </head>
 
@@ -20,28 +20,34 @@
         require('home.php');
         break;
       case 'boten':
-        require('boten.php');
+        require('./paginas/boten/boten.php');
         break;
-      case 'boot_toevoegen':
-        require('bootToevoegen.php');
+      case 'bootToevoegen':
+        require('./paginas/boten/bootToevoegen.php');
         break;
-      case 'boot_aanpassen':
-        require('bootAanpassen.php');
+      case 'bootAanpassen':
+        require('./paginas/boten/bootAanpassen.php');
         break;
-      case 'boot_verwijderen':
-        require('bootVerwijderen.php');
+      case 'bootVerwijderen':
+        require('./paginas/boten/bootVerwijderen.php');
         break;
-      case 'beherenCursusDagen':
-        require('beherenCursusDagen.php');
+      case 'beherenCursusTijden':
+        require('./paginas/cursustijden/beherenCursusTijden.php');
         break;
-      case 'cursusdagToevoegen':
-        require('cursusdagToevoegen.php');
+      case 'cursustijdToevoegen':
+        require('./paginas/cursustijden/cursustijdToevoegen.php');
         break;
-      case 'cursusdagVerwijderen':
-        require('cursusdagVerwijderen.php');
+      case 'cursustijdVerwijderen':
+        require('./paginas/cursustijden/cursustijdVerwijderen.php');
         break;
-      case 'cursusdagAanpassen':
-        require('cursusdagAanpassen.php');
+      case 'cursustijdAanpassen':
+        require('./paginas/cursustijden/cursustijdAanpassen.php');
+        break;
+      case 'planningCursusDagen':
+        require('./paginas/cursusdagen/planningCursusDagen.php');
+        break;
+      case 'cursusToevoegen':
+        require('./paginas/cursusdagen/cursusToevoegen.php');
         break;
     }
   } else {
