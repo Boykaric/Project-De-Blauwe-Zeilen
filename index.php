@@ -14,6 +14,12 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <?php require('navbar.php'); ?>
   <?php
+  /* The code block is checking the value of the 'pagina' parameter in the URL using the 
+  superglobal. If the 'pagina' parameter is set, it uses a switch statement to determine which page
+  to require based on the value of 'pagina'. Each case corresponds to a specific page file that
+  needs to be included. If the 'pagina' parameter is not set, it sets the value of ['pagina']
+  to 'home' and requires the 'home.php' file. Finally, it requires the 'footer.php' file. */
+
   if (isset($_GET['pagina'])) {
     switch ($_GET['pagina']) {
       case 'home':
@@ -48,6 +54,12 @@
         break;
       case 'cursusToevoegen':
         require('./paginas/cursusdagen/cursusToevoegen.php');
+        break;
+      case 'cursusdagAanpassen':
+        require('./paginas/cursusdagen/cursusdagAanpassen.php');
+        break;
+      case 'cursusdagVerwijderen':
+        require('./paginas/cursusdagen/cursusdagVerwijderen.php');
         break;
     }
   } else {

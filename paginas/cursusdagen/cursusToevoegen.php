@@ -65,7 +65,7 @@ if (isset($_POST['opslaan'])) {
 
     // Voeg de gegevens toe aan de 'planning' tabel
     $sql = "INSERT INTO planning (cursus_id, boot_id, instructeur_id, actief) VALUES ('$cursusTijdId', '$bootId', '$instructeurId', '$actief')";
-
+    header("location: ?pagina=beherenCursusDagen");
     if (mysqli_query($conn, $sql)) {
         echo "Gegevens zijn succesvol opgeslagen in de planning tabel.";
     } else {
