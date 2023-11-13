@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> d7cdbfa08847aec7a3be7d6872444a596020307e
 <div class="container">
     <h1> Cursus Toevoegen </h1>
     <form method="post">
@@ -56,7 +60,15 @@
         </div>
     </form>
 </div>
+<?php
+if (isset($_POST['opslaan'])) {
+    // Haal de geselecteerde waarden uit het formulier
+    $cursusTijdId = $_POST['cursustijd'];
+    $bootId = $_POST['boot'];
+    $instructeurId = $_POST['instructeur'];
+    $actief = $_POST['actief'];
 
+<<<<<<< HEAD
 <?php
 if (isset($_POST['opslaan'])) {
     // Haal de geselecteerde waarden uit het formulier
@@ -73,5 +85,10 @@ if (isset($_POST['opslaan'])) {
     } else {
         echo "Fout bij het opslaan van gegevens: " . mysqli_error($conn);
     }
+=======
+    // Voeg de gegevens toe aan de 'planning' tabel
+    $result = $conn->query("INSERT INTO planning (cursus_id, boot_id, instructeur_id, actief) VALUES ('$cursusTijdId', '$bootId', '$instructeurId', '$actief')");
+    header("location: ?pagina=planningCursusDagen");
+>>>>>>> d7cdbfa08847aec7a3be7d6872444a596020307e
 }
 ?>

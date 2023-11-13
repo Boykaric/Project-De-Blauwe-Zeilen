@@ -86,6 +86,9 @@
       case 'uitloggen':
         require('./assets/onderdelen/loginSysteem/uitloggen.php');
         break;
+      case 'roosterCursist':
+        require('./assets/onderdelen/roosterCursist.php');
+        break;
     }
   } else {
     $_GET['pagina'] = 'home';
