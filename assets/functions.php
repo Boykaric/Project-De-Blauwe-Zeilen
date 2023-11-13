@@ -1,5 +1,14 @@
 <?php
 
+
+/*
+De functie RedirectNaarPagina wordt gebruikt om de gebruiker naar een opgegeven pagina te leiden
+na een bepaald aantal seconden, en geeft een succesbericht weer als er geen pagina is opgegeven.
+@param seconds Het aantal seconden voordat de pagina wordt doorgestuurd. Als deze parameter niet
+wordt opgegeven of is ingesteld op NULL, wordt de pagina onmiddellijk doorgestuurd.
+@param pagina De parameter "pagina" wordt gebruikt om de pagina aan te geven waarnaar de gebruiker zal
+worden doorgestuurd. Het kan elke geldige URL of paginanaam binnen de website zijn.
+*/
 function RedirectNaarPagina($seconds = NULL,$pagina = NULL)
 {
 	if(!empty($seconds))
@@ -109,6 +118,3 @@ function LoginCheck($conn)
 	else
 		return true;//username komt niet voor
   }
-
-  
-?>

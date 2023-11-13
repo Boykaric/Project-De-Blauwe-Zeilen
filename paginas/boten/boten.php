@@ -2,7 +2,6 @@
 
 // Prepare and execute a query
 $result = $conn->query("SELECT * FROM boten");
-$result->fetch_assoc();
 ?>
 
 <body>
@@ -27,29 +26,34 @@ $result->fetch_assoc();
             </thead>
             <tbody class="body_boten text-center">
                 <?php
-                // Fetch and process the data
-                foreach ($result as $row) {
-                    // Process each row of data here
-                    echo "<tr>";
-                    echo "<td>" . $row['id'] . "</td>";
-                    echo "<td>" . $row['naam'] . "</td>";
-                    echo "<td>" . $row['minpassagiers'] . "</td>";
-                    echo "<td>" . $row['maxpassagiers'] . "</td>";
-                    echo "<td>" . $row['grootte'] . "</td>";
-                    echo "<td>" . $row['niveau'] . "</td>";
-                    echo "<td>";
-                    if ($row['beschikbaarheid'] == 1) {
-                        echo " Beschikbaar ";
-                    } else {
-                        echo " Niet Beschikbaar ";
-                    };
-                    echo "</td>";
-                    echo "<td>" . $row['opmerking'] . "</td>";
-                    echo "<td>
-                    <a class='btn btn-warning p3' href='?pagina=bootAanpassen&id=" . $row['id'] . "'> Edit </a>
-                    <a class='btn btn-danger' href='?pagina=bootVerwijderen&id=" . $row['id'] . "'> Delete </a> </td>";
-                    echo "</tr>";
-                };
+                // Check if there are rows in the result set
+                if ($result->num_rows > 0) {
+                    // Fetch and process the data
+                    while ($row = $result->fetch_assoc()) {
+                        // Process each row of data here
+                        echo "<tr>";
+                        echo "<td>" . $row['id'] . "</td>";
+                        echo "<td>" . $row['naam'] . "</td>";
+                        echo "<td>" . $row['minpassagiers'] . "</td>";
+                        echo "<td>" . $row['maxpassagiers'] . "</td>";
+                        echo "<td>" . $row['grootte'] . "</td>";
+                        echo "<td>" . $row['niveau'] . "</td>";
+                        echo "<td>";
+                        if ($row['beschikbaarheid'] == 1) {
+                            echo " Beschikbaar ";
+                        } else {
+                            echo " Niet Beschikbaar ";
+                        };
+                        echo "</td>";
+                        echo "<td>" . $row['opmerking'] . "</td>";
+                        echo "<td>
+                                <a class='btn btn-warning p3' href='?pagina=bootAanpassen&id=" . $row['id'] . "'> Edit </a>
+                                <a class='btn btn-danger' href='?pagina=bootVerwijderen&id=" . $row['id'] . "'> Delete </a> </td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='6'>Geen resultaten gevonden</td></tr>";
+                }
                 ?>
             </tbody>
         </table>

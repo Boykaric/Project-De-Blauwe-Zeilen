@@ -1,7 +1,10 @@
 <?php
 
 // Prepare and execute a query
-$result = $conn->query("SELECT planning.id, cursusdagen.begintijd, cursusdagen.eindtijd, boten.naam, gebruikers.voornaam, gebruikers.achternaam, actief FROM planning INNER JOIN gebruikers ON planning.instructeur_id = gebruikers.id INNER JOIN boten ON planning.boot_id = boten.id INNER JOIN cursusdagen ON planning.cursus_id = cursusdagen.id;");
+$result = $conn->query("SELECT planning.id, cursusdagen.begintijd, cursusdagen.eindtijd, boten.naam, gebruikers.voornaam, gebruikers.achternaam, actief FROM planning 
+INNER JOIN gebruikers ON planning.instructeur_id = gebruikers.id 
+INNER JOIN boten ON planning.boot_id = boten.id 
+INNER JOIN cursusdagen ON planning.cursus_id = cursusdagen.id;");
 ?>
 
 <body>

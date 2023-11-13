@@ -2,7 +2,6 @@
 
 // Prepare and execute a query
 $result = $conn->query("SELECT * FROM cursusdagen");
-$result->fetch_assoc();
 ?>
 
 <body>
@@ -21,8 +20,10 @@ $result->fetch_assoc();
             </thead>
             <tbody class="body_boten text-center">
                 <?php
-                // Fetch and process the data
-                foreach ($result as $row) {
+                // Check if there are rows in the result set
+                if ($result->num_rows > 0) {
+                    // Fetch and process the data
+                    while ($row = $result->fetch_assoc()) {
                     // Process each row of data here
                     echo "<tr>";
                     echo "<td>" . $row['id'] . "</td>";
@@ -32,7 +33,10 @@ $result->fetch_assoc();
                     <a class='btn btn-warning p3' href='?pagina=cursustijdAanpassen&id=" . $row['id'] . "'> Edit </a>
                     <a class='btn btn-danger' href='?pagina=cursustijdVerwijderen&id=" . $row['id'] . "'> Delete </a> </td>";
                     echo "</tr>";
-                };
+                    }
+                } else {
+                    echo "<tr><td colspan='6'>Geen resultaten gevonden</td></tr>";
+                }
                 ?>
             </tbody>
         </table>
