@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> d7cdbfa08847aec7a3be7d6872444a596020307e
 <div class="container">
     <h1> Cursus Toevoegen </h1>
     <form method="post">
