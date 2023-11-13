@@ -1,21 +1,3 @@
-<?php
-if (isset($_POST['opslaan'])) {
-    // Haal de geselecteerde waarden uit het formulier
-    $cursusTijdId = $_POST['cursustijd'];
-    $bootId = $_POST['boot'];
-    $instructeurId = $_POST['instructeur'];
-    $actief = $_POST['actief'];
-
-    // Voeg de gegevens toe aan de 'planning' tabel
-    $sql = "INSERT INTO planning (cursus_id, boot_id, instructeur_id, actief) VALUES ('$cursusTijdId', '$bootId', '$instructeurId', '$actief')";
-    header("location: ?pagina=planningCursusDagen");
-    if (mysqli_query($conn, $sql)) {
-        echo "Gegevens zijn succesvol opgeslagen in de planning tabel.";
-    } else {
-        echo "Fout bij het opslaan van gegevens: " . mysqli_error($conn);
-    }
-}
-?>
 <div class="container">
     <h1> Cursus Toevoegen </h1>
     <form method="post">
@@ -75,3 +57,21 @@ if (isset($_POST['opslaan'])) {
     </form>
 </div>
 
+<?php
+if (isset($_POST['opslaan'])) {
+    // Haal de geselecteerde waarden uit het formulier
+    $cursusTijdId = $_POST['cursustijd'];
+    $bootId = $_POST['boot'];
+    $instructeurId = $_POST['instructeur'];
+    $actief = $_POST['actief'];
+
+    // Voeg de gegevens toe aan de 'planning' tabel
+    $sql = "INSERT INTO planning (cursus_id, boot_id, instructeur_id, actief) VALUES ('$cursusTijdId', '$bootId', '$instructeurId', '$actief')";
+    header("location: ?pagina=planningCursusDagen");
+    if (mysqli_query($conn, $sql)) {
+        echo "Gegevens zijn succesvol opgeslagen in de planning tabel.";
+    } else {
+        echo "Fout bij het opslaan van gegevens: " . mysqli_error($conn);
+    }
+}
+?>

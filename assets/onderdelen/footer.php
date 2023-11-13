@@ -3,8 +3,8 @@
         <div class="row align-items-center">
             <div class="col text-start m-3">
                 <p><strong> Information </strong></p>
-                Mail: <a href="#"> Deblauwezeilen@cursussen.nl </a> <br>
-                Tel: <a href=""> 06-1243545645 </a>
+                Mail: <a class="footer-link" href="#"> Deblauwezeilen@cursussen.nl </a> <br>
+                Tel: <a class="footer-link" href="#"> 06-1243545645 </a>
             </div>
             <div class="col text-center m-3">
                 <p><strong> Social Media </strong></p>
