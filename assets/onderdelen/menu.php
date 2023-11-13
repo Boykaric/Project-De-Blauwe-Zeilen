@@ -34,6 +34,7 @@ switch ($level) {
         <a class='nav-link active' aria-current='page' href='?pagina=home'>Home</a>
         <a class='nav-link' href='#'>Over ons</a>
         <a class='nav-link' href='?pagina=inschrijvenCursus'>Inschrijven</a>
+        <a class='nav-link' href='?pagina=roosterCursist'>Rooster</a>
       </div>
     </div>
     <a class='nav-link' href='?pagina=uitloggen'>Uitloggen</a>
