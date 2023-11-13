@@ -26,7 +26,7 @@ foreach ($result as $row) {
             </div>
             <div class="form-group">
                 <label for="niveau">Niveau:</label>
-                <select class="form-group" id="niveau" name="niveau">
+                <select id="niveau" name="niveau" class="form-control">
                     <option <?php if($row['niveau'] == "Beginner"){echo "selected";}; ?> value="Beginner"> Beginner </option>
                     <option <?php if($row['niveau'] == "Gevorderd"){echo "selected";}; ?> value="Gevorderd"> Gevorderd </option>
                     <option <?php if($row['niveau'] == "Expert"){echo "selected";}; ?> value="Expert"> Expert </option>

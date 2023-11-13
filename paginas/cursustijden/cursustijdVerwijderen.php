@@ -21,6 +21,6 @@
 
     if (isset($_POST['verwijderen'])){
         mysqli_query($conn, "DELETE FROM `cursusdagen` WHERE id =" . $_GET['id']);
-        header("location: ?pagina=beherenCursusDagen");
+        header("location: ?pagina=beherenCursusTijden");
     };
 ?>

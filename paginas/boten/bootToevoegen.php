@@ -4,23 +4,23 @@
     <form method="post">
         <div class="form-group">
             <label for="naam">Boot Naam:</label>
-            <input type="text" class="form-control" id="naam" name="naam">
+            <input type="text" class="form-control" id="naam" name="naam" class="form-control">
         </div>
         <div class="form-group">
             <label for="minpassagiers">Minimaal Aantal Passagiers:</label>
-            <input type="text" class="form-control" id="minpassagiers" name="minpassagiers">
+            <input type="text" class="form-control" id="minpassagiers" name="minpassagiers" class="form-control">
         </div>
         <div class="form-group">
             <label for="maxpassagiers">Maximaal Aantal Passagiers:</label>
-            <input type="text" class="form-control" id="maxpassagiers" name="maxpassagiers">
+            <input type="text" class="form-control" id="maxpassagiers" name="maxpassagiers" class="form-control">
         </div>
         <div class="form-group">
             <label for="grootte">Grootte Boot</label>
-            <input type="text" class="form-control" id="grootte" name="grootte">
+            <input type="text" class="form-control" id="grootte" name="grootte" class="form-control">
         </div>
         <div class="form-group">
             <label for="niveau">Type moeilijkheid:</label>
-            <select class="form-group" id="niveau" name="niveau">
+            <select class="form-control" id="niveau" name="niveau" class="form-control">
                 <option value="Beginner"> Beginner </option>
                 <option value="Gevorderd"> Gevorderd </option>
                 <option value="Expert"> Expert </option>
@@ -28,14 +28,14 @@
         </div>
         <div class="form-group">
             <label for="beschikbaarheid">Beschikbaarheid Boot:</label>
-            <select class="form-control" id="beschikbaarheid" name="beschikbaarheid">
+            <select class="form-control" id="beschikbaarheid" name="beschikbaarheid" class="form-control">
                 <option value="1"> Beschikbaar </option>
                 <option value="0"> Niet Beschikbaar </option>
             </select>
         </div>
         <div class="form-group">
             <label for="opmerking">Opmerking:</label>
-            <textarea class="form-control" id="opmerking" rows="3" name="opmerking"></textarea>
+            <textarea class="form-control" id="opmerking" rows="3" name="opmerking" class="form-control"></textarea>
         </div>
         <input type="submit" class="btn btn-primary" value="Opslaan" name="opslaan">
     </form>

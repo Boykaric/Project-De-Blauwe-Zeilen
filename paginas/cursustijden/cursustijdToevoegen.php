@@ -4,14 +4,14 @@
     <form method="post">
         <div class="form-group">
             <label for="begintijd">Begin Tijd:</label>
-            <input type="datetime-local" class="form-control" id="begintijd" name="begintijd">
+            <input type="datetime-local" class="form-control" id="begintijd" name="begintijd" class="form-control">
         </div>
         <div class="form-group">
             <label for="eindtijd">Eind Tijd:</label>
-            <input type="datetime-local" class="form-control" id="eindtijd" name="eindtijd">
+            <input type="datetime-local" class="form-control" id="eindtijd" name="eindtijd" class="form-control">
         </div>
         <div class="form-group">
-            <input type="submit" class="btn btn-primary" value="Opslaan" name="opslaan">
+            <input type="submit" class="btn btn-primary" value="Opslaan" name="opslaan" class="form-control">
         </div>
 </div>
 
@@ -23,6 +23,6 @@ if (isset($_POST['opslaan'])) { // Controleer of het "opslaan" knop is ingedrukt
 
     // Voeg de gegevens toe aan de database
     mysqli_query($conn, "INSERT INTO cursusdagen (begintijd, eindtijd) VALUES ('$begintijd', '$eindtijd')");
-    header("location: ?pagina=beherenCursusDagen");
+    header("location: ?pagina=beherenCursusTijden");
 }
 ?>

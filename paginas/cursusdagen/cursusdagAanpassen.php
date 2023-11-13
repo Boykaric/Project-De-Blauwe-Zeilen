@@ -3,7 +3,7 @@ $result = mysqli_query($conn, "SELECT planning.id as id, cursusdagen.id as cursu
 mysqli_fetch_assoc($result);
 ?>
 <div class="container">
-    <h1> Cursus Toevoegen </h1>
+    <h1> Cursus Aanpassen </h1>
     <form method="post">
         <div class="form-group">
             <label for="cursustijd">Cursus Tijd:</label>
@@ -27,7 +27,7 @@ mysqli_fetch_assoc($result);
                 <?php
                 foreach ($result as $rij) {
                     // Loop door de resultaten van de databasequery
-                    $boten = mysqli_query($conn, "SELECT * FROM boten");
+                    $boten = mysqli_query($conn, "SELECT * FROM boten WHERE beschikbaarheid = 1");
                     mysqli_fetch_assoc($boten);
                     foreach ($boten as $row) {
                         $selected = ($row['id'] == $rij['boot_id']) ? 'selected' : '';

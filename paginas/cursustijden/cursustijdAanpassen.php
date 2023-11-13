@@ -10,11 +10,11 @@ foreach ($result as $row) {
         <form method="post">
             <div class="form-group">
                 <label for="begintijd">Begintijd:</label>
-                <input type="datetime-local" class="form-control" id="begintijd" name="begintijd" value="<?= $row['begintijd']; ?>">
+                <input type="datetime-local" class="form-control" id="begintijd" name="begintijd" value="<?= $row['begintijd']; ?>" class="form-control">
             </div>
             <div class="form-group">
                 <label for="eindtijd">Eindtijd:</label>
-                <input type="datetime-local" class="form-control" id="eindtijd" name="eindtijd" value="<?= $row['eindtijd']; ?>">
+                <input type="datetime-local" class="form-control" id="eindtijd" name="eindtijd" value="<?= $row['eindtijd']; ?>" class="form-control">
             </div>
             <input type="submit" class="btn btn-primary" value="Opslaan" name="opslaan">
         </form>
@@ -30,7 +30,7 @@ if (isset($_POST['opslaan'])) { // Controleer of het "opslaan" knop is ingedrukt
 
     // Update de de boot waar de ID, de ID is van de cursus dag die je hebt aangeklikt
     mysqli_query($conn, "UPDATE `cursusdagen` SET `begintijd`= '$begintijd',`eindtijd`='$eindtijd' WHERE id =" . $_GET['id']);
-    header("location: ?pagina=beherenCursusDagen");
+    header("location: ?pagina=beherenCursusTijden");
 }
 
 ?>
