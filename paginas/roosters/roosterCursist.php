@@ -9,9 +9,6 @@ INNER JOIN gebruikers ON planning.instructeur_id = gebruikers.id WHERE cursist_i
 $result->fetch_assoc();
 
 ?>
-
-<body>
-
     <div class="container">
         <h1> ROOSTER </h1>
         <table class="table table_boten table-striped">
@@ -42,5 +39,4 @@ $result->fetch_assoc();
             </tbody>
         </table>
     </div>
-</body>
 <?php
