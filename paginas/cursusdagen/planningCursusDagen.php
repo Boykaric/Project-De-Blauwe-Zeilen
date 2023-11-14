@@ -10,7 +10,11 @@ INNER JOIN cursusdagen ON planning.cursus_id = cursusdagen.id;");
 <body>
     <div class="container">
         <h1> CURSUSDAGEN OVERZICHT </h1>
-        <a href="?pagina=cursusToevoegen" class="btn btn-success mb-4 mt-4"> Cursus Dag Toevoegen </a>
+        <?php
+        if ($_SESSION['level'] >= 3) {
+            echo" <a href='?pagina=cursusToevoegen' class='btn btn-success mb-4 mt-4'> Cursus Dag Toevoegen </a>";
+        }
+        ?>
         <form method="post">
             <table class="table table_boten table-striped">
                 <thead class="header_boten">
