@@ -4,7 +4,7 @@
 $result = $conn->query("SELECT cursusdagen.begintijd, cursusdagen.eindtijd, boten.naam FROM roostercursist 
 INNER JOIN planning ON roostercursist.planning_id = planning.id 
 INNER JOIN cursusdagen ON planning.cursus_id = cursusdagen.id 
-INNER JOIN boten ON planning.boot_id = boten.id  WHERE cursist_id =" . $_SESSION['userId']);
+INNER JOIN boten ON planning.boot_id = boten.id  WHERE instructeur_id =" . $_SESSION['userId']);
 $result->fetch_assoc();
 
 ?>
