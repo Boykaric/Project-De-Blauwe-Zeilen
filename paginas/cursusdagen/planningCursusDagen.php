@@ -1,9 +1,9 @@
 <?php
 
 // Prepare and execute a query
-$result = $conn->query("SELECT planning.id, cursusdagen.begintijd, cursusdagen.eindtijd, boten.naam, gebruikers.voornaam, gebruikers.achternaam, actief FROM planning 
-INNER JOIN gebruikers ON planning.instructeur_id = gebruikers.id 
-INNER JOIN boten ON planning.boot_id = boten.id 
+$result = $conn->query("SELECT planning.id, planning.boot_id, planning.instructeur_id, cursusdagen.begintijd, cursusdagen.eindtijd, boten.naam, gebruikers.voornaam, gebruikers.achternaam, actief FROM planning 
+LEFT JOIN gebruikers ON planning.instructeur_id = gebruikers.id 
+LEFT JOIN boten ON planning.boot_id = boten.id 
 INNER JOIN cursusdagen ON planning.cursus_id = cursusdagen.id;");
 ?>
 
@@ -46,8 +46,18 @@ INNER JOIN cursusdagen ON planning.cursus_id = cursusdagen.id;");
                             echo "<tr>";
                             echo "<td>" . $row['id'] . "</td>";
                             echo "<td>" . $row['begintijd'] . " / " . $row['eindtijd'] . "</td>";
-                            echo "<td>" . $row['naam'] . "</td>";
-                            echo "<td>" . $row['voornaam'] . " " . $row['achternaam'] . "</td>";
+                            
+                            if ($row['boot_id'] === NULL) {
+                                echo "<td> Geen </td>";
+                            } else {
+                                echo "<td>" . $row['naam'] . "</td>";
+                            }
+                            
+                            if ($row['instructeur_id'] === NULL) {
+                                echo "<td> Geen </td>";
+                            } else {
+                                echo "<td>" . $row['voornaam'] . " " . $row['achternaam'] . "</td>";
+                            }
                             echo "<td>" . str_replace(['1', '0'], ['Ja', 'Nee'], $row['actief']) . "</td>";
                             if ($_SESSION['level'] >= 3) {
                                 echo "<td>
@@ -56,8 +66,8 @@ INNER JOIN cursusdagen ON planning.cursus_id = cursusdagen.id;");
                             }
                             if ($_SESSION['level'] == 2) {
                                 echo "<td> 
-                                <input type='hidden' name='id' value" . $row['id'] . ">
-                                <input type='hidden' name='userId' value" . $_SESSION['userId'] . ">
+                                <input type='hidden' name='id' value='" . $row['id'] . "'>
+                                <input type='hidden' name='userId' value='" . $_SESSION['userId'] . "'>
                                 <input type='submit' class='btn btn-primary' name='beschikbaar' value='Beschikbaar'> 
                             </td>";
                             }

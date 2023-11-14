@@ -1,3 +1,21 @@
+<?php
+if (isset($_POST['opslaan'])) {
+    // Haal de geselecteerde waarden uit het formulier
+    $cursusTijdId = $_POST['cursustijd'];
+    $bootId = ($_POST['boot'] == 0) ? null : $_POST['boot']; // Als boot_id 0 is, zet het dan op NULL
+    $instructeurId = ($_POST['instructeur'] == 0) ? null : $_POST['instructeur']; // Als instructeur_id 0 is, zet het dan op NULL
+    $actief = $_POST['actief'];
+
+    // Voeg de gegevens toe aan de 'planning' tabel
+    $stmt = $conn->prepare("INSERT INTO planning (cursus_id, boot_id, instructeur_id, actief) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("iiii", $cursusTijdId, $bootId, $instructeurId, $actief);
+    $stmt->execute();
+    $stmt->close();
+
+    header("location: ?pagina=planningCursusDagen");
+}
+?>
+
 <div class="container">
     <h1> Cursus Toevoegen </h1>
     <form method="post">
@@ -19,7 +37,7 @@
         <div class="form-group">
             <label for="boot">Boot:</label>
             <select name="boot" class="form-control">
-                <option> Onbekend </option>
+                <option value="0"> Onbekend </option>
                 <?php
                 $result = mysqli_query($conn, "SELECT * FROM boten WHERE beschikbaarheid = '1'");
                 while ($row = mysqli_fetch_assoc($result)) {
@@ -32,7 +50,7 @@
         <div class="form-group">
             <label for="instructeur">Instructeur:</label>
             <select name="instructeur" class="form-control">
-                <option> Onbekend </option>
+                <option value="0"> Onbekend </option>
                 <?php
                 $result = mysqli_query($conn, "SELECT * FROM gebruikers WHERE level = '2'");
                 while ($row = mysqli_fetch_assoc($result)) {
@@ -56,16 +74,3 @@
         </div>
     </form>
 </div>
-<?php
-if (isset($_POST['opslaan'])) {
-    // Haal de geselecteerde waarden uit het formulier
-    $cursusTijdId = $_POST['cursustijd'];
-    $bootId = $_POST['boot'];
-    $instructeurId = $_POST['instructeur'];
-    $actief = $_POST['actief'];
-
-    // Voeg de gegevens toe aan de 'planning' tabel
-    $result = $conn->query("INSERT INTO planning (cursus_id, boot_id, instructeur_id, actief) VALUES ('$cursusTijdId', '$bootId', '$instructeurId', '$actief')");
-    header("location: ?pagina=planningCursusDagen");
-}
-?>
