@@ -1,16 +1,13 @@
 <?php
 
 // Prepare and execute a query
-$result = $conn->query("SELECT cursusdagen.begintijd, cursusdagen.eindtijd, boten.naam, gebruikers.voornaam, gebruikers.achternaam FROM roostercursist 
+$result = $conn->query("SELECT cursusdagen.begintijd, cursusdagen.eindtijd, boten.naam FROM roostercursist 
 INNER JOIN planning ON roostercursist.planning_id = planning.id 
 INNER JOIN cursusdagen ON planning.cursus_id = cursusdagen.id 
-INNER JOIN boten ON planning.boot_id = boten.id 
-INNER JOIN gebruikers ON planning.instructeur_id = gebruikers.id WHERE cursist_id =" . $_SESSION['userId']);
+INNER JOIN boten ON planning.boot_id = boten.id  WHERE cursist_id =" . $_SESSION['userId']);
+$result->fetch_assoc();
 
 ?>
-
-<body>
-
     <div class="container">
         <h1> ROOSTER </h1>
         <table class="table table_boten table-striped">
@@ -18,7 +15,6 @@ INNER JOIN gebruikers ON planning.instructeur_id = gebruikers.id WHERE cursist_i
                 <tr class="header_row_boten text-center">
                     <th> Begin / Eindtijd </th>
                     <th> Boot Naam </th>
-                    <th> Instructeur </th>
                 </tr>
             </thead>
             <tbody class="body_boten text-center">
@@ -31,7 +27,6 @@ INNER JOIN gebruikers ON planning.instructeur_id = gebruikers.id WHERE cursist_i
                         echo "<tr>";
                         echo "<td>" . $row['begintijd'] . " / " . $row['eindtijd'] . "</td>";
                         echo "<td>" . $row['naam'] . "</td>";
-                        echo "<td>" . $row['voornaam'] . " " . $row['achternaam'] . "</td>";
                         echo "</tr>";
                     }
                 } else {
@@ -41,5 +36,4 @@ INNER JOIN gebruikers ON planning.instructeur_id = gebruikers.id WHERE cursist_i
             </tbody>
         </table>
     </div>
-</body>
 <?php

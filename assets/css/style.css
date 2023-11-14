@@ -54,6 +54,16 @@ body {
     color: var(--primary) !important;
 }
 
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+.dropdown-btn:hover{
+    background-color: var(--accent);
+    color: var(--secondary);
+    border-color: var(--accent);
+}
+
 .container {
     margin-top: 50px;
 }
@@ -103,4 +113,14 @@ body {
     background-color: var(--accent);
     border-color: var(--accent) !important;
     color: var(--secondary);
+}
+
+.dropdown-btn {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.dropdown-menu {
+    background-color: var(--secondary);
+    color: var(--background);
 }

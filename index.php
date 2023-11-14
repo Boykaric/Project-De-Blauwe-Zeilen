@@ -87,7 +87,7 @@
         require('./assets/onderdelen/loginSysteem/uitloggen.php');
         break;
       case 'roosterCursist':
-        require('./assets/onderdelen/roosterCursist.php');
+        require('./paginas/roosters/roosterCursist.php');
         break;
       case 'beschikbaarheid':
         require('./paginas/beschikbaarheid/beschikbaarheid.php');
