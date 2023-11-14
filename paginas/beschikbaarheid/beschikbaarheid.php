@@ -30,7 +30,7 @@
                     };
                     if (isset($_POST['submitVer'])) {
 
-                        mysqli_query($conn, "DELETE FROM beschikbaarheid WHERE cursus_id=" . $_POST['cursus_id'] ."AND instructeur_id = " . $_POST['instructeur_id']);
+                        mysqli_query($conn, "DELETE FROM beschikbaarheid WHERE cursus_id = " . $_POST['cursus_id'] . " AND instructeur_id = " . $_POST['instructeur_id'] . ";");
                         unset($_POST['submitVer']);
                         //echo "<meta https-equiv='refresh' content='0'>";
                         //header("Refresh:1; URL=Home.php");
