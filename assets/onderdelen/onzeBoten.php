@@ -1,4 +1,4 @@
-<h1 class="boten">Onze Boten</h1>
+<h1 class="homepage-title">Onze Boten</h1>
 
 <?php
 $result = mysqli_query($conn, "SELECT * FROM Boten");
