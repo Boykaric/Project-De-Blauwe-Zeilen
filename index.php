@@ -89,6 +89,9 @@
       case 'roosterCursist':
         require('./assets/onderdelen/roosterCursist.php');
         break;
+      case 'beschikbaarheid':
+        require('./paginas/beschikbaarheid.php');
+        break;
     }
   } else {
     $_GET['pagina'] = 'home';

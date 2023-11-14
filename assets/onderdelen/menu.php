@@ -34,10 +34,19 @@ if (!isset($level)) {
         <a class='nav-link active' aria-current='page' href='?pagina=home'>Home</a>
         <a class='nav-link' href='#'>Over ons</a>
         <a class='nav-link' href='?pagina=inschrijvenCursus'>Inschrijven</a>
-        <a class='nav-link' href='?pagina=roosterCursist'>Rooster</a>
       </div>
     </div>
-    <a class='nav-link' href='?pagina=uitloggen'>Uitloggen</a>
+    <div class='dropdown'>
+    <button class='btn btn-secondary dropdown-toggle' type='button' data-bs-toggle='dropdown' aria-expanded='false'>
+      Mijn Account
+    </button>
+    <ul class='dropdown-menu'>
+      <li><a class='nav-link' href='?pagina=uitloggen'>Account Info</a></li>
+      <li><a class='nav-link' href='?pagina=roosterCursist'>Rooster</a><li>
+      <li><a class='nav-link' href='?pagina=uitloggen'>Uitloggen</a></li>
+    </ul>
+  </div>
+
   </div>";
       break;
     case 2:
@@ -59,6 +68,7 @@ if (!isset($level)) {
         <li><a class='nav-link' href='?pagina=beherenCursusTijden'> Cursus Tijden </a></li>
         <li><a class='nav-link' href='?pagina=planningCursusDagen'> Cursussen </a></li>
         <li><a class='nav-link' href='?pagina=boten'>Boten</a></li>
+        <li><a class='nav-link' href='?pagina=beschikbaarheid'>Beschikbaarheid</a></li>
       </ul>
     </div>
       </div>
