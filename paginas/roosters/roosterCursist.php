@@ -6,7 +6,6 @@ INNER JOIN planning ON roostercursist.planning_id = planning.id
 INNER JOIN cursusdagen ON planning.cursus_id = cursusdagen.id 
 INNER JOIN boten ON planning.boot_id = boten.id 
 INNER JOIN gebruikers ON planning.instructeur_id = gebruikers.id WHERE cursist_id =" . $_SESSION['userId']);
-$result->fetch_assoc();
 
 ?>
     <div class="container">
