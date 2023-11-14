@@ -48,10 +48,9 @@ if (!isset($level)) {
         Beheren
       </button>
       <ul class='dropdown-menu'>
-        <li><a class='nav-link' href='?pagina=beherenCursusTijden'> Cursus Tijden </a></li>
         <li><a class='nav-link' href='?pagina=planningCursusDagen'> Cursussen </a></li>
-        <li><a class='nav-link' href='?pagina=boten'>Boten</a></li>
         <li><a class='nav-link' href='?pagina=beschikbaarheid'>Beschikbaarheid</a></li>
+        <li><a class='nav-link' href='?pagina=beschikbaarheid'>Rooster</a></li>
       </ul>
     </div>
       </div>

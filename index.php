@@ -90,7 +90,7 @@
         require('./paginas/roosters/roosterCursist.php');
         break;
       case 'beschikbaarheid':
-        require('./paginas/beschikbaarheid.php');
+        require('./paginas/beschikbaarheid/beschikbaarheid.php');
         break;
       case 'aanpassenCursist':
         require('./paginas/gegevensCursist/aanpassenCursist.php');
