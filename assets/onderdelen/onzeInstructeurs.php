@@ -1,12 +1,13 @@
-<h1 class="homepage-title">Onze Instructeurs</h1>
-
-<?php
-$result = mysqli_query($conn, "SELECT * FROM gebruikers WHERE level = 2");
-$result->fetch_assoc();
-$x = 0;
-foreach ($result as $row) {
-    if ($x == 0) {
-        echo '<div class="row">
+<section class="section">
+    <h1 class="section-title">Onze Instructeurs</h1>
+<div class="section-content">
+    <?php
+    $result = mysqli_query($conn, "SELECT * FROM gebruikers WHERE level = 2");
+    $result->fetch_assoc();
+    $x = 0;
+    foreach ($result as $row) {
+        if ($x == 0) {
+            echo '<div class="row">
             <div class="col-4">
                 <div class="card">
                 <img class="card-img-top" src="https://dummyimage.com/200x200" alt="Title">
@@ -17,9 +18,9 @@ foreach ($result as $row) {
                     </div>
                 </div>
             </div>';
-    }
-    if ($x == 1) {
-        echo '<div class="col-4">
+        }
+        if ($x == 1) {
+            echo '<div class="col-4">
                 <div class="card">
                 <img class="card-img-top" src="https://dummyimage.com/200x200" alt="Title">
                     <div class="card-body">
@@ -28,9 +29,9 @@ foreach ($result as $row) {
                     </div>
                 </div>
             </div>';
-    }
-    if ($x == 2) {
-        echo '<div class="col-4">
+        }
+        if ($x == 2) {
+            echo '<div class="col-4">
                 <div class="card">
                 <img class="card-img-top" src="https://dummyimage.com/200x200" alt="Title">
                     <div class="card-body">
@@ -38,10 +39,12 @@ foreach ($result as $row) {
                         <p class="card-text">' . $row['opmerking'] . '</p>
                     </div>
             </div>
-        </div>
-    </div>';
-        $x = 0;
+        </div>';
+            $x = 0;
+        }
+        $x++;
     }
-    $x++;
-}
-?>
+    ?>
+    </div>
+</div>
+</section>

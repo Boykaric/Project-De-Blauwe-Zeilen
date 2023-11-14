@@ -77,6 +77,23 @@ INNER JOIN cursusdagen ON planning.cursus_id = cursusdagen.id;");
                     } else {
                         echo "<tr><td colspan='6'>Geen resultaten gevonden</td></tr>";
                     }
+                    if (isset($_POST['beschikbaar'])) {
+
+                        try {
+                            mysqli_query($conn, "INSERT INTO beschikbaarheid (cursus_id,instructeur_id)
+                              VALUES ('" . $_POST['id'] . "','" . $_POST['userId'] . "')");
+                        } catch (PDOException $e) {
+                            $foutMelding = "Er is een fout opgetreden";
+                        }
+                        echo "<meta https-equiv='refresh' content='0'>";
+                        ?>
+                        <script>
+                            setTimeout(function() {
+                                location.reload();
+                            }, 500); // 1000 milliseconds = 1 seconds
+                        </script>
+                    <?php
+                    }
                     ?>
                 </tbody>
             </table>

@@ -43,19 +43,20 @@ if (!isset($level)) {
       <div class='navbar-nav'>
         <a class='nav-link active' aria-current='page' href='?pagina=home'>Home</a>
         <a class='nav-link' href='#'>Over ons</a>
-        <div class='dropdown mt-4'>
-      <button class='dropdown-btn btn btn-secondary dropdown-toggle' type='button' data-bs-toggle='dropdown' aria-expanded='false'>
-        Beheren
-      </button>
-      <ul class='dropdown-menu'>
-        <li><a class='nav-link' href='?pagina=planningCursusDagen'> Cursussen </a></li>
-        <li><a class='nav-link' href='?pagina=beschikbaarheid'>Beschikbaarheid</a></li>
-        <li><a class='nav-link' href='?pagina=beschikbaarheid'>Rooster</a></li>
-      </ul>
-    </div>
       </div>
     </div>
-    <a class='nav-link' href='?pagina=uitloggen'>Uitloggen</a>
+    <div class='dropdown m-4'>
+    <button class='dropdown-btn btn btn-secondary dropdown-toggle' type='button' data-bs-toggle='dropdown' aria-expanded='false'>
+      Mijn Account
+    </button>
+    <ul class='dropdown-menu'>
+      <li><a class='nav-link' href='?pagina=planningCursusDagen'> Cursussen </a></li>
+      <li><a class='nav-link' href='?pagina=beschikbaarheid'>Mijn Beschikbaarheid</a></li>
+      <li><a class='nav-link' href='?pagina=roosterInstructeur'>Mijn Rooster</a></li>
+      <li><a class='nav-link' href='?pagina=uitloggen'>Uitloggen</a></li>
+    </ul>
+  </div>
+    
   </div>";
       break;
     case 3:
@@ -68,19 +69,25 @@ if (!isset($level)) {
       <div class='navbar-nav'>
         <a class='nav-link active' aria-current='page' href='?pagina=home'>Home</a>
         <a class='nav-link' href='#'>Over ons</a>
-        <div class='dropdown mt-4'>
-      <button class='dropdown-btn btn btn-secondary dropdown-toggle' type='button' data-bs-toggle='dropdown' aria-expanded='false'>
-        Beheren
-      </button>
-      <ul class='dropdown-menu'>
-        <li><a class='nav-link' href='?pagina=beherenCursusTijden'> Cursus Tijden </a></li>
-        <li><a class='nav-link' href='?pagina=planningCursusDagen'> Cursussen </a></li>
-        <li><a class='nav-link' href='?pagina=boten'>Boten</a></li>
-      </ul>
-    </div>
+        <div class='dropdown m-4'>
+          <button class='dropdown-btn btn btn-secondary dropdown-toggle' type='button' data-bs-toggle='dropdown' aria-expanded='false'>
+            Beheren
+          </button>
+            <ul class='dropdown-menu'>
+              <li><a class='nav-link' href='?pagina=beherenCursusTijden'> Cursus Tijden </a></li>
+              <li><a class='nav-link' href='?pagina=planningCursusDagen'> Cursussen </a></li>
+              <li><a class='nav-link' href='?pagina=boten'>Boten</a></li>
+            </ul>
+        </div>
       </div>
     </div>
-    <a class='nav-link' href='?pagina=uitloggen'>Uitloggen</a>
+    <div class='dropdown m-4'>
+    <button class='dropdown-btn btn btn-secondary dropdown-toggle' type='button' data-bs-toggle='dropdown' aria-expanded='false'>
+      Mijn Account
+    </button>
+    <ul class='dropdown-menu'>
+      <li><a class='nav-link' href='?pagina=uitloggen'>Uitloggen</a></li>
+    </ul>
   </div>";
       break;
     case 4:
@@ -93,19 +100,26 @@ if (!isset($level)) {
       <div class='navbar-nav'>
         <a class='nav-link active' aria-current='page' href='?pagina=home'>Home</a>
         <a class='nav-link' href='#'>Over ons</a>
-        <div class='dropdown mt-4'>
-      <button class='dropdown-btn btn btn-secondary dropdown-toggle' type='button' data-bs-toggle='dropdown' aria-expanded='false'>
-        Beheren
-      </button>
-      <ul class='dropdown-menu'>
-        <li><a class='nav-link' href='?pagina=beherenCursusTijden'> Cursus Tijden </a></li>
-        <li><a class='nav-link' href='?pagina=planningCursusDagen'> Cursussen </a></li>
-        <li><a class='nav-link' href='?pagina=boten'>Boten</a></li>
-      </ul>
-    </div>
       </div>
     </div>
-    <a class='nav-link' href='?pagina=uitloggen'>Uitloggen</a>
+    <div class='dropdown m-4'>
+    <button class='dropdown-btn btn btn-secondary dropdown-toggle' type='button' data-bs-toggle='dropdown' aria-expanded='false'>
+      Beheren
+    </button>
+    <ul class='dropdown-menu'>
+      <li><a class='nav-link' href='?pagina=beherenCursusTijden'> Cursus Tijden </a></li>
+      <li><a class='nav-link' href='?pagina=planningCursusDagen'> Cursussen </a></li>
+      <li><a class='nav-link' href='?pagina=boten'>Boten</a></li>
+    </ul>
+  </div>
+  <div class='dropdown m-4'>
+  <button class='dropdown-btn btn btn-secondary dropdown-toggle' type='button' data-bs-toggle='dropdown' aria-expanded='false'>
+    Mijn Account
+  </button>
+  <ul class='dropdown-menu'>
+    <li><a class='nav-link' href='?pagina=uitloggen'>Uitloggen</a></li>
+  </ul>
+</div>
   </div>";
       break;
     default:

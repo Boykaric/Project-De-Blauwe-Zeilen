@@ -1,5 +1,6 @@
-<h1 class="homepage-title">Onze Boten</h1>
-
+<section class="section">
+<h1 class="section-title">Onze Boten</h1>
+<div class="section-content">
 <?php
 $result = mysqli_query($conn, "SELECT * FROM Boten");
 $result->fetch_assoc();
@@ -32,3 +33,5 @@ foreach ($result as $row) {
     $i++;
 }
 ?>
+</div>
+</section>
