@@ -50,7 +50,7 @@ if (!isset($level)) {
       <ul class='dropdown-menu'>
         <li><a class='nav-link' href='?pagina=planningCursusDagen'> Cursussen </a></li>
         <li><a class='nav-link' href='?pagina=beschikbaarheid'>Beschikbaarheid</a></li>
-        <li><a class='nav-link' href='?pagina=beschikbaarheid'>Rooster</a></li>
+        <li><a class='nav-link' href='?pagina'>Rooster</a></li>
       </ul>
     </div>
       </div>

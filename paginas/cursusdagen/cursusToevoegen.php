@@ -19,7 +19,7 @@
         <div class="form-group">
             <label for="boot">Boot:</label>
             <select name="boot" class="form-control">
-                <option value="0"> Onbekend </option>
+                <option> Onbekend </option>
                 <?php
                 $result = mysqli_query($conn, "SELECT * FROM boten WHERE beschikbaarheid = '1'");
                 while ($row = mysqli_fetch_assoc($result)) {
@@ -32,7 +32,7 @@
         <div class="form-group">
             <label for="instructeur">Instructeur:</label>
             <select name="instructeur" class="form-control">
-                <option value="0"> Onbekend </option>
+                <option> Onbekend </option>
                 <?php
                 $result = mysqli_query($conn, "SELECT * FROM gebruikers WHERE level = '2'");
                 while ($row = mysqli_fetch_assoc($result)) {
