@@ -59,7 +59,7 @@ if(isset($_POST['inloggen']))
 
 
     if (login($email, $password, $conn)) {
-        RedirectNaarPagina(1,"?pagina=inschrijvenCursus");
+        RedirectNaarPagina(1,"?pagina=home");
     }else {
         require('inloggenForm.php');
     }
