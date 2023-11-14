@@ -123,5 +123,24 @@ body {
 
 .dropdown-menu {
     background-color: var(--secondary);
-    color: var(--background);
+    
 }
+
+.section {
+    position: relative;
+    margin-top: 50px;
+}
+
+.section-content {
+    margin-top: 200px;
+}
+
+.section-title {
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    /* margin-left: 50px; */
+    transform: translate(-50%, -50%);
+}
+
+
