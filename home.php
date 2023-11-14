@@ -2,6 +2,8 @@
 require("./assets/onderdelen/header.php");
 ?>
 <div class="container">
-bs5
-
+    <?php
+    require("./assets/onderdelen/onzeBoten.php");
+    require("./assets/onderdelen/onzeInstructeurs.php");
+    ?>
 </div>
