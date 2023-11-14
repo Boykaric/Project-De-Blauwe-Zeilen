@@ -8,9 +8,15 @@
     --background: #F9F8FF;
     --accent: #E6F4F1;
 
-}   
+    --secondary_RGBA: RGBA(121, 136, 242, 0.7)
+}
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 900;
 }
 
@@ -20,6 +26,7 @@ p {
 
 
 body {
+    overflow-x: hidden;
     width: 100vw;
     min-height: 100vh;
     background-color: var(--background);
@@ -42,6 +49,7 @@ body {
     margin: 20px;
     color: var(--accent);
 }
+
 .navbar-nav .nav-link.active {
     color: var(--primary) !important;
 }
@@ -84,5 +92,15 @@ body {
     top: 50%;
     margin-left: 50px;
     transform: translate(-0%, -50%);
-    
+}
+
+.header-background {
+    background-color: var(--secondary_RGBA);
+    border-color: var(--secondary) !important;
+}
+
+.header-btn {
+    background-color: var(--accent);
+    border-color: var(--accent) !important;
+    color: var(--secondary);
 }
