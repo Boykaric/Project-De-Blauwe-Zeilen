@@ -41,7 +41,7 @@ if (!isset($level)) {
       Mijn Account
     </button>
     <ul class='dropdown-menu'>
-      <li><a class='nav-link' href='?pagina=uitloggen'>Account Info</a></li>
+      <li><a class='nav-link' href='?pagina=gegevensOverzichtCursist'>Account Info</a></li>
       <li><a class='nav-link' href='?pagina=roosterCursist'>Rooster</a><li>
       <li><a class='nav-link' href='?pagina=uitloggen'>Uitloggen</a></li>
     </ul>

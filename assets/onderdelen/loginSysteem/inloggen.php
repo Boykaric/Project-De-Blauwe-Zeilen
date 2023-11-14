@@ -20,7 +20,13 @@ function login($email, $password, $conn)
 
 
 			$_SESSION['userId'] = $result['id'];
+			$_SESSION['voornaam'] = $result['voornaam'];
+			$_SESSION['achternaam'] = $result['achternaam'];
 			$_SESSION['email'] = $email;
+			$_SESSION['telnr'] = $result['telnr'];
+			$_SESSION['straatnaam'] = $result['straatnaam'];
+			$_SESSION['huisNr'] = $result['huisnr'];
+			$_SESSION['postcode'] = $result['postcode'];
 			$_SESSION['level'] = $result['level'];
 			$_SESSION['loginString'] = hash('sha512',
 			$hashedPassword . $user_browser);

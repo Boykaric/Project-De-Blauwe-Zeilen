@@ -92,6 +92,12 @@
       case 'beschikbaarheid':
         require('./paginas/beschikbaarheid.php');
         break;
+      case 'aanpassenCursist':
+        require('./paginas/gegevensCursist/aanpassenCursist.php');
+        break;
+      case 'gegevensOverzichtCursist':
+        require('./paginas/gegevensCursist/gegevensOverzichtCursist.php');
+        break;
     }
   } else {
     $_GET['pagina'] = 'home';
@@ -101,5 +107,12 @@
   require('./assets/onderdelen/footer.php');
   ?>
 </body>
+<script>
+  if (window.history.replaceState) {
+
+    window.history.replaceState(null, null, window.location.href);
+
+  }
+</script>
 
 </html>
