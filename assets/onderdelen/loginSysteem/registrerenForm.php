@@ -58,7 +58,7 @@
         <div class="row mb-4">
             <div class="col">
                 <label for="niveau">Niveau</label>
-                <select class="form-control" name="niveau">
+                <select class="form-control" name="niveau" required>
                     <option selected disabled> Kies uw Niveau </option>
                     <option value="1"> Beginner </option>
                     <option value="2"> Gevorderd </option>

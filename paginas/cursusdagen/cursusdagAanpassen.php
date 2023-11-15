@@ -35,29 +35,21 @@ $row = mysqli_fetch_assoc($result);
         <div class="form-group">
             <label for="boten">Boot:</label>
             <select class="form-control" name="boten" id="boten">
+                <option value='NULL'> Onbekend </option>
                 <?php
-                if (empty($row['boot_id'])) {
-                ?>
-                    <option value='NULL'> Onbekend </option>
-                <?php
+                $boten = mysqli_query($conn, "SELECT * FROM boten WHERE beschikbaarheid = 1");
+                foreach ($boten as $boot) {
+                    $selected = ($row['boot_id'] == $boot['id']) ? 'selected' : '';
+                    echo "<option value='" . $boot['id'] . "' $selected>" . $boot['naam'] . "</option>";
                 }
-                    $boten = mysqli_query($conn, "SELECT * FROM boten WHERE beschikbaarheid = 1");
-                    foreach ($boten as $boot) {
-                        $selected = ($row['boot_id'] == $boot['id']) ? 'selected' : '';
-                        echo "<option value='" . $boot['id'] . "' $selected>" . $boot['naam'] . "</option>";
-                    }
                 ?>
             </select>
         </div>
         <div class="form-group">
             <label for="instructeur">Instructeur:</label>
             <select class="form-control" name="instructeur" id="instructeur">
-            <?php
-                if (empty($row['instructeur_id'])) {
-                ?>
-                    <option value='NULL'> Onbekend </option>
-                    <?php
-                }
+                <option value='NULL'> Onbekend </option>
+                <?php
                 $instructeurs = mysqli_query($conn, "SELECT * FROM gebruikers WHERE level = 2");
                 foreach ($instructeurs as $instructeur) {
                     $selected = ($instructeur['id'] == $row['gebruikers_id']) ? 'selected' : '';

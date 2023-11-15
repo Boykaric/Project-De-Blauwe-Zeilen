@@ -88,11 +88,6 @@ $errTekst = "";
     }
 	else
 	{
-		//formulier is succesvol gevalideerd
-
-		//maak unieke salt
-		// $salt = hash('sha512', uniqid(mt_rand(1, mt_getrandmax()), true));
-
 		//hash het paswoord met de Salt
 		$password = hash('sha512', $password);
 

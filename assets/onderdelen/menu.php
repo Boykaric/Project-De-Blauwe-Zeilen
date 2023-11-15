@@ -77,6 +77,7 @@ if (!isset($level)) {
               <li><a class='nav-link' href='?pagina=beherenCursusTijden'> Cursus Tijden </a></li>
               <li><a class='nav-link' href='?pagina=planningCursusDagen'> Cursussen </a></li>
               <li><a class='nav-link' href='?pagina=boten'>Boten</a></li>
+              <li><a class='nav-link' href='?pagina=beherenGebruikers'>Gebruikers</a></li>
             </ul>
         </div>
       </div>
@@ -110,6 +111,7 @@ if (!isset($level)) {
       <li><a class='nav-link' href='?pagina=beherenCursusTijden'> Cursus Tijden </a></li>
       <li><a class='nav-link' href='?pagina=planningCursusDagen'> Cursussen </a></li>
       <li><a class='nav-link' href='?pagina=boten'>Boten</a></li>
+      <li><a class='nav-link' href='?pagina=beherenGebruikers'>Gebruikers</a></li>
     </ul>
   </div>
   <div class='dropdown m-4'>
