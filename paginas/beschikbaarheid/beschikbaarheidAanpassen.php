@@ -14,7 +14,7 @@
                     </div>
                     <div style="margin-top:10px;">
                         <input type="submit" class="btn btn-primary" value="Opslaan" name='BeschikbaarheidToevoegen'>
-                        <a href="?pagina=boten" class="btn btn-secondary"> Annuleren</a>
+                        <a href="?pagina=beschikbaarheid" class="btn btn-secondary"> Annuleren</a>
                     </div>
                 </form>
             </div>
