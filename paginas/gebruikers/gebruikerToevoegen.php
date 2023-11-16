@@ -21,77 +21,92 @@ if (isset($_POST['submit'])) {
         // Voeg de gegevens in de database in
         $query = "INSERT INTO gebruikers (voornaam, achternaam,email, telnr, straatnaam, huisnr, wachtwoord, postcode, opmerking, niveau)
         VALUES ('$voornaam', '$achternaam', '$email', '$telnr','$straatnaam', '$huisNr', '$hashedWachtwoord', '$postcode','$opmerking','$niveau')";
-        RedirectNaarPagina(0,"?pagina=beherenGebruikers");
+        RedirectNaarPagina(0, "?pagina=beherenGebruikers");
         if (mysqli_query($conn, $query)) {
             echo "Gebruiker is aangemaakt";
         } else {
             echo "Fout bij het uitvoeren van de query: " . mysqli_error($conn);
         }
-    }else {
+    } else {
         echo "Wachtwoorden komen niet overeen!";
-} 
+    }
 }
 
 
 ?>
-
-<body>
+<div class="container">
     <h2>Gebruiker Aanmaken</h2>
     <form method="post" action="">
-        <div class="form-group">
-            <label for="Thema">voornaam</label>
-            <input type="text" class="form-control" name="voornaam" placeholder="Voornaam" id="voornaam" required autocomplete="off" value='<?php $voornaam; ?>'>
+        <div class="row">
+            <div class="col">
+                <label class="form-label" for="Thema">voornaam</label>
+                <input type="text" class="form-control" name="voornaam"  id="voornaam" required
+                    autocomplete="off" value='<?php $voornaam; ?>'>
+            </div>
+            <div class="col">
+                <label class="form-label" for="Thema">achternaam</label>
+                <input type="text" class="form-control" name="achternaam"  id="achternaam"
+                    required autocomplete="off" value='<?php $achternaam; ?>'>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="Thema">achternaam</label>
-            <input type="text" class="form-control" name="achternaam" placeholder="Achternaam" id="achternaam" required autocomplete="off" value='<?php $achternaam; ?>'>
+        <div class="row">
+            <div class="col">
+                <label class="form-label" for="Thema">Email</label>
+                <input type="email" class="form-control" name="email"  id="Gebruikersnaam" required
+                    autocomplete="off" value='<?php $email; ?>'>
+            </div>
+            <div class="col">
+                <label class="form-label" for="Thema">Telefoonnummer</label>
+                <input type="text" class="form-control" name="telnr"  id="telefoonnummer"
+                    required autocomplete="off" value='<?php $telNr; ?>'>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="Thema">Email</label>
-            <input type="text" class="form-control" name="email" placeholder="Email" id="Gebruikersnaam" required autocomplete="off" value='<?php $email; ?>'>
+        <div class="row">
+            <div class="col">
+                <label class="form-label" for="Thema">Straatnaam</label>
+                <input type="text" class="form-control" name="straatnaam"  id="straatnaam"
+                    required autocomplete="off" value='<?php $straatnaam; ?>'>
+            </div>
+            <div class="col">
+                <label class="form-label" for="Thema">Huisnummer</label>
+                <input type="text" class="form-control" name="huisnr"  id="huisnummer" required
+                    autocomplete="off" value='<?php $huisNr; ?>'>
+            </div>
+            <div class="col">
+                <label class="form-label" for="Thema">Postcode</label>
+                <input type="text" class="form-control" name="postcode"  id="postcode" required
+                    autocomplete="off" value='<?php $postcode; ?>'>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="Thema">Telefoonnummer</label>
-            <input type="text" class="form-control" name="telnr" placeholder="Telefoonnummer" id="telefoonnummer" required autocomplete="off" value='<?php $telNr; ?>'>
+        <div class="row">
+            <div class="col">
+                <label class="form-label" for="wachtwoord">Wachtwoord</label>
+                <input type="password" class="form-control" name="wachtwoord" id="wachtwoord"
+                    required autocomplete="off">
+            </div>
+            <div class="col">
+                <label class="form-label" for="retypeWachtwoord"> Retype Wachtwoord</label>
+                <input type="password" class="form-control" name="retypeWachtwoord" 
+                    id="retypeWachtwoord" required autocomplete="off">
+            </div>
         </div>
-        <div class="form-group">
-            <label for="Thema">Straatnaam</label>
-            <input type="text" class="form-control" name="straatnaam" placeholder="Straatnaam" id="straatnaam" required autocomplete="off" value='<?php $straatnaam; ?>'>
+        <div class="row">
+            <div class="col">
+                <label class="form-label" for="Thema">Opmerking</label>
+                <textarea rows="5" max-rows="5" class="form-control" name="opmerking"
+                    id="opmerking" required autocomplete="off" value='<?php $opmerking; ?>'></textarea>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="Thema">Huisnummer</label>
-            <input type="text" class="form-control" name="huisnr" placeholder="Huisnummer" id="huisnummer" required autocomplete="off" value='<?php $huisNr; ?>'>
+        <div class="row">
+            <div class="col">
+                <label class="form-label" for="niveau">Niveau:</label>
+                <select class="form-control" id="niveau" name="niveau" class="form-control">
+                    <option value="1"> Beginner </option>
+                    <option value="2"> Gevorderd </option>
+                    <option value="3"> Expert </option>
+                </select>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="Thema">Postcode</label>
-            <input type="text" class="form-control" name="postcode" placeholder="Postcode" id="postcode" required autocomplete="off" value='<?php $postcode; ?>'>
-        </div>
-        <div class="form-group">
-            <label for="wachtwoord">Wachtwoord</label>
-            <input type="password" class="form-control" name="wachtwoord" placeholder="Password" id="wachtwoord" required autocomplete="off">
-            <label for="retypeWachtwoord"> Retype Wachtwoord</label>
-            <input type="password" class="form-control" name="retypeWachtwoord" placeholder="Retype Password" id="retypeWachtwoord" required autocomplete="off">
-        </div>
-        <div class="form-group">
-            <label for="Thema">Opmerking</label>
-            <input type="text" class="form-control" name="opmerking" placeholder="Opmerking" id="opmerking" required autocomplete="off" value='<?php $opmerking; ?>'>
-        </div>
-        <div class="form-group">
-            <label for="niveau">Niveau:</label>
-            <select class="form-control" id="niveau" name="niveau" class="form-control">
-                <option value="1"> Beginner </option>
-                <option value="2"> Gevorderd </option>
-                <option value="3"> Expert </option>
-            </select>
-        </div>
-
-        <input type="submit" class="btn btn-primary" name="submit" value="Verzenden">
-
+        <input type="submit" class="mt-2 btn btn-primary" name="submit" value="Verzenden">
     </form>
-
-</body>
-
-</html>
-</body>
-
-</html>
+</div>

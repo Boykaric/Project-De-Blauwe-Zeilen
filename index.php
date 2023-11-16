@@ -114,6 +114,9 @@
         case 'gebruikerToevoegen':
           require('./paginas/gebruikers/gebruikerToevoegen.php');
           break;
+          case 'gebruikerVerwijderen':
+            require('./paginas/gebruikers/gebruikerVerwijderen.php');
+            break;
     }
   } else {
     $_GET['pagina'] = 'home';

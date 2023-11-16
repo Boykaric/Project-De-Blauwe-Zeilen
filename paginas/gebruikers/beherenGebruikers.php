@@ -13,9 +13,10 @@ if (isset($_POST["Delete"])) {
 
 ?>
 <div class="container">
+<h1> Gebruikers </h1>
   <?php
   if ($_SESSION['level'] >= 3) {
-    echo " <a href='?pagina=gebruikerToevoegen' class='btn btn-primary mb-4 mt-4'> Gebruiker Toevoegen </a>";
+    echo " <a href='?pagina=gebruikerToevoegen' class='btn btn-success mb-4 mt-4'> Gebruiker Toevoegen </a>";
   }
   ?>
   <table class="table table_boten table-striped">
@@ -37,8 +38,7 @@ if (isset($_POST["Delete"])) {
           <?php
         }
         ?>
-        <th>Opties</th>
-        <th></th>
+        <th>Extra Knoppen</th>
       </tr>
     </thead>
     <tbody class="body_boten text-center">
@@ -77,18 +77,10 @@ if (isset($_POST["Delete"])) {
             <td>
               <?= str_replace(['1', '2', '3', '4'], ['Cursist', 'Instructeur', 'Admin', 'Eigenaar'], $data['level']); ?>
             </td>
-            <form action="" method="post">
               <td>
-                <a href="?pagina=gebruikerAanpassen&id=<?= $data['id'] ?>" class="pencil btn btn-warning"><i
-                    class="fa-solid fa-pencil"></i> 
-                  </a>
+                <a href="?pagina=gebruikerAanpassen&id=<?= $data['id'] ?>" class="pencil btn btn-warning mb-1"><i class="fa-solid fa-pencil"></i></a>
+                <a href="?pagina=gebruikerVerwijderen&id=<?= $data['id'] ?>" class="pencil btn btn-danger"><i class="fa-solid fa-trash-can"></i></a>
               </td>
-              <td>
-                <input type="hidden" name="id" value="<?= $data['id'] ?>">
-                <button type="submit" name="Delete" class="btn btn-danger"> <i class="fa-solid fa-trash-can"></i> </button>
-              </td>
-            </form>
-
           </tr>
           <?php
         }
