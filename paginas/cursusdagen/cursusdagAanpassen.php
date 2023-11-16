@@ -77,6 +77,7 @@ $row = mysqli_fetch_assoc($result);
         </div>
         <div class="form-group">
             <input type="submit" class="btn btn-primary" value="Opslaan" name="opslaan">
+            <a href="?pagina=planningCursusDagen" class="btn btn-secondary"> Annuleren</a>
         </div>
     </form>
 </div>

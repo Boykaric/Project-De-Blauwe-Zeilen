@@ -12,6 +12,7 @@
         </h1>
         <form method="post">
             <input type="submit" name="verwijderen" id="verwijderen" class="btn btn-danger" value="Verwijderen">
+            <a href="?pagina=beherenGebruikers" class="btn btn-secondary"> Annuleren</a>
     </form>
     </div>
 </body>

@@ -1,3 +1,18 @@
+<?php
+if (isset($_POST['opslaan'])) { // Controleer of het "opslaan" knop is ingedrukt
+    $naam = $_POST['naam'];
+    $minpassagiers = $_POST['minpassagiers'];
+    $maxpassagiers = $_POST['maxpassagiers'];
+    $grootte = $_POST['grootte'];
+    $niveau = $_POST['niveau'];
+    $beschikbaarheid = $_POST['beschikbaarheid'];
+    $opmerking = $_POST['opmerking'];
+
+    // Voeg de gegevens toe aan de database
+    mysqli_query($conn, "INSERT INTO boten (naam, minpassagiers, maxpassagiers, grootte, niveau, beschikbaarheid, opmerking) VALUES ('$naam', '$minpassagiers', '$maxpassagiers', '$grootte', '$niveau', '$beschikbaarheid', '$opmerking')");
+    header("location: ?pagina=boten");
+}
+?>
 <div class="container">
 
     <h1> Boot Toevoegen </h1>
@@ -38,22 +53,6 @@
             <textarea class="form-control" id="opmerking" rows="3" name="opmerking" class="form-control"></textarea>
         </div>
         <input type="submit" class="btn btn-primary" value="Opslaan" name="opslaan">
+        <a href="?pagina=boten" class="btn btn-secondary"> Annuleren</a>
     </form>
 </div>
-
-
-<?php
-if (isset($_POST['opslaan'])) { // Controleer of het "opslaan" knop is ingedrukt
-    $naam = $_POST['naam'];
-    $minpassagiers = $_POST['minpassagiers'];
-    $maxpassagiers = $_POST['maxpassagiers'];
-    $grootte = $_POST['grootte'];
-    $niveau = $_POST['niveau'];
-    $beschikbaarheid = $_POST['beschikbaarheid'];
-    $opmerking = $_POST['opmerking'];
-
-    // Voeg de gegevens toe aan de database
-    mysqli_query($conn, "INSERT INTO boten (naam, minpassagiers, maxpassagiers, grootte, niveau, beschikbaarheid, opmerking) VALUES ('$naam', '$minpassagiers', '$maxpassagiers', '$grootte', '$niveau', '$beschikbaarheid', '$opmerking')");
-    header("location: ?pagina=boten");
-}
-?>

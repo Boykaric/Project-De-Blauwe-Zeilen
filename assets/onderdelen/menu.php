@@ -69,7 +69,9 @@ if (!isset($level)) {
       <div class='navbar-nav'>
         <a class='nav-link active' aria-current='page' href='?pagina=home'>Home</a>
         <a class='nav-link' href='#'>Over ons</a>
-        <div class='dropdown m-4'>
+      </div>
+    </div>
+    <div class='dropdown m-4'>
           <button class='dropdown-btn btn btn-secondary dropdown-toggle' type='button' data-bs-toggle='dropdown' aria-expanded='false'>
             Beheren
           </button>
@@ -80,8 +82,6 @@ if (!isset($level)) {
               <li><a class='nav-link' href='?pagina=beherenGebruikers'>Gebruikers</a></li>
             </ul>
         </div>
-      </div>
-    </div>
     <div class='dropdown m-4'>
     <button class='dropdown-btn btn btn-secondary dropdown-toggle' type='button' data-bs-toggle='dropdown' aria-expanded='false'>
       Mijn Account
@@ -89,6 +89,7 @@ if (!isset($level)) {
     <ul class='dropdown-menu'>
       <li><a class='nav-link' href='?pagina=uitloggen'>Uitloggen</a></li>
     </ul>
+    </div>
   </div>";
       break;
     case 4:

@@ -12,6 +12,7 @@
         </div>
         <div class="form-group">
             <input type="submit" class="btn btn-primary" value="Opslaan" name="opslaan" class="form-control">
+            <a href="?pagina=beherenCursusTijden" class="btn btn-secondary"> Annuleren</a>
         </div>
 </div>
 
