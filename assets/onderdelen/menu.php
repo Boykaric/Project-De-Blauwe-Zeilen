@@ -16,7 +16,7 @@ if (!isset($level)) {
     <div class='collapse navbar-collapse' id='navbarNavAltMarkup'>
       <div class='navbar-nav'>
         <a class='nav-link active' aria-current='page' href='?pagina=home'>Home</a>
-        <a class='nav-link' href='#'>Over ons</a>
+        <a class='nav-link' href='?pagina=overOns'>Over ons</a>
         <a class='nav-link' href='?pagina=inschrijvenCursus'>Inschrijven</a>
       </div>
     </div>
@@ -42,7 +42,7 @@ if (!isset($level)) {
     <div class='collapse navbar-collapse' id='navbarNavAltMarkup'>
       <div class='navbar-nav'>
         <a class='nav-link active' aria-current='page' href='?pagina=home'>Home</a>
-        <a class='nav-link' href='#'>Over ons</a>
+        <a class='nav-link' href='?pagina=overOns'>Over ons</a>
       </div>
     </div>
     <div class='dropdown m-4'>
@@ -68,7 +68,7 @@ if (!isset($level)) {
     <div class='collapse navbar-collapse' id='navbarNavAltMarkup'>
       <div class='navbar-nav'>
         <a class='nav-link active' aria-current='page' href='?pagina=home'>Home</a>
-        <a class='nav-link' href='#'>Over ons</a>
+        <a class='nav-link' href='?pagina=overOns'>Over ons</a>
         <div class='dropdown m-4'>
           <button class='dropdown-btn btn btn-secondary dropdown-toggle' type='button' data-bs-toggle='dropdown' aria-expanded='false'>
             Beheren
@@ -100,7 +100,7 @@ if (!isset($level)) {
     <div class='collapse navbar-collapse' id='navbarNavAltMarkup'>
       <div class='navbar-nav'>
         <a class='nav-link active' aria-current='page' href='?pagina=home'>Home</a>
-        <a class='nav-link' href='#'>Over ons</a>
+        <a class='nav-link' href='?pagina=overOns'>Over ons</a>
       </div>
     </div>
     <div class='dropdown m-4'>
@@ -133,7 +133,7 @@ if (!isset($level)) {
         <div class='collapse navbar-collapse' id='navbarNavAltMarkup'>
           <div class='navbar-nav'>
             <a class='nav-link active' aria-current='page' href='?pagina=home'>Home</a>
-            <a class='nav-link' href='#'>Over ons</a>
+            <a class='nav-link' href='?pagina=overOns'>Over ons</a>
             <a class='nav-link' href='?pagina=inschrijvenCursus'>Inschrijven</a>
           </div>
         </div>

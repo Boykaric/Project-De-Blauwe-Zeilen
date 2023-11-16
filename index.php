@@ -111,12 +111,15 @@
       case 'beherenGebruikers':
         require('./paginas/gebruikers/beherenGebruikers.php');
         break;
-        case 'gebruikerToevoegen':
-          require('./paginas/gebruikers/gebruikerToevoegen.php');
-          break;
-          case 'gebruikerVerwijderen':
-            require('./paginas/gebruikers/gebruikerVerwijderen.php');
-            break;
+      case 'gebruikerToevoegen':
+        require('./paginas/gebruikers/gebruikerToevoegen.php');
+        break;
+      case 'gebruikerVerwijderen':
+        require('./paginas/gebruikers/gebruikerVerwijderen.php');
+        break;
+      case 'overOns':
+        require('overOns.php');
+        break;
     }
   } else {
     $_GET['pagina'] = 'home';

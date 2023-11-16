@@ -143,6 +143,24 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.overOns {
+    margin-bottom: 500px;
+}
+
+.box {
+    max-width: 60%;
+    background-color: red;
+    color: var(--accent);
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+.box:nth-child(2n+2){
+    background-color: var(--secondary);
+}
+
 .pencil {
     color: white;
 }
