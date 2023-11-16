@@ -96,14 +96,14 @@
       case 'beschikbaarheid':
         require('./paginas/beschikbaarheid/beschikbaarheid.php');
         break;
+      case 'beschikbaarheidToevoegen':
+        require('./paginas/beschikbaarheid/beschikbaarheidToevoegen.php');
+        break;
       case 'aanpassenCursist':
         require('./paginas/gegevensCursist/aanpassenCursist.php');
         break;
       case 'gegevensOverzichtCursist':
         require('./paginas/gegevensCursist/gegevensOverzichtCursist.php');
-        break;
-      case 'createHome':
-        require('./paginas/createHome.php');
         break;
       case 'gebruikerAanpassen':
         require('./paginas/gebruikers/gebruikerAanpassen.php');
@@ -111,12 +111,12 @@
       case 'beherenGebruikers':
         require('./paginas/gebruikers/beherenGebruikers.php');
         break;
-        case 'gebruikerToevoegen':
-          require('./paginas/gebruikers/gebruikerToevoegen.php');
-          break;
-          case 'gebruikerVerwijderen':
-            require('./paginas/gebruikers/gebruikerVerwijderen.php');
-            break;
+      case 'gebruikerToevoegen':
+        require('./paginas/gebruikers/gebruikerToevoegen.php');
+        break;
+      case 'gebruikerVerwijderen':
+        require('./paginas/gebruikers/gebruikerVerwijderen.php');
+        break;
     }
   } else {
     $_GET['pagina'] = 'home';

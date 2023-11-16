@@ -4,6 +4,8 @@
         </div>
         <div class="col-12">
             <table class="table">
+                <h1> Mijn Beschikbaarheid </h1>
+                <a href='?pagina=beschikbaarheidToevoegen' class='btn btn-success mb-4 mt-4'> Beschikbaarheid Toevoegen </a>
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">Begintijd</th>
@@ -23,7 +25,7 @@
                                         <form action='' method='POST'>
                                             <input type='hidden' id='cursus_id' name='cursus_id' value='" . $data['cursus_id'] . "'>
                                             <input type='hidden' id='instructeur_id' name='instructeur_id' value='" . $data['instructeur_id'] . "'>
-                                            <button type='submit' class='btn btn-danger' value='Submit' name='submitVer'>Verwijderen</button>
+                                            <a href='?pagina=beschikbaarheidVerwijderen'> Verwijderen </a>
                                         </form>
                                     </td>
                                 </tr>";
