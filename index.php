@@ -96,14 +96,14 @@
       case 'beschikbaarheid':
         require('./paginas/beschikbaarheid/beschikbaarheid.php');
         break;
+      case 'beschikbaarheidToevoegen':
+        require('./paginas/beschikbaarheid/beschikbaarheidToevoegen.php');
+        break;
       case 'aanpassenCursist':
         require('./paginas/gegevensCursist/aanpassenCursist.php');
         break;
       case 'gegevensOverzichtCursist':
         require('./paginas/gegevensCursist/gegevensOverzichtCursist.php');
-        break;
-      case 'createHome':
-        require('./paginas/createHome.php');
         break;
       case 'gebruikerAanpassen':
         require('./paginas/gebruikers/gebruikerAanpassen.php');

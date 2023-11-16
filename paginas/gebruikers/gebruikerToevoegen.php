@@ -108,5 +108,6 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
         <input type="submit" class="mt-2 btn btn-primary" name="submit" value="Verzenden">
+        <a href="?pagina=beherenGebruikers" class="btn btn-secondary mt-2"> Annuleren</a>
     </form>
 </div>

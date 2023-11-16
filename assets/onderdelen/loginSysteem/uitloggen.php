@@ -17,7 +17,7 @@ setcookie(session_name(),
 session_destroy();
 
 // Header refresh naar homepage
-RedirectNaarPagina(1, "?pagina=home");
+RedirectNaarPagina(0, "?pagina=home");
 ?>
 
 

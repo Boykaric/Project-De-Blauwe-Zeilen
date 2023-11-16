@@ -71,6 +71,7 @@ if (isset($_POST['opslaan'])) {
 
         <div class="form-group">
             <input type="submit" class="btn btn-primary" value="Opslaan" name="opslaan">
+            <a href="?pagina=beherenCursusTijden" class="btn btn-secondary"> Annuleren</a>
         </div>
     </form>
 </div>

@@ -1,4 +1,26 @@
 <?php
+/* This code block is checking if the "opslaan" button is pressed. If it is, it retrieves the values
+from the form fields (naam, minpassagiers, maxpassagiers, grootte, niveau, beschikbaarheid,
+opmerking) using the  superglobal. Then, it updates the corresponding row in the "boten" table
+in the database with the new values. Finally, it redirects the user to the "boten" page. */
+
+if (isset($_POST['opslaan'])) { // Controleer of het "opslaan" knop is ingedrukt
+    // Code specifiek voor de "Opslaan" knop
+    $naam = $_POST['naam'];
+    $minpassagiers = $_POST['minpassagiers'];
+    $maxpassagiers = $_POST['maxpassagiers'];
+    $grootte = $_POST['grootte'];
+    $niveau = $_POST['niveau'];
+    $beschikbaarheid = $_POST['beschikbaarheid'];
+    $opmerking = $_POST['opmerking'];
+
+    // Update de boot waar de ID, de ID is van de boot die je hebt aangeklikt
+    mysqli_query($conn, "UPDATE `boten` SET `naam`= '$naam',`minpassagiers`='$minpassagiers',`maxpassagiers`='$maxpassagiers',`grootte`='$grootte',`niveau`='$niveau',`beschikbaarheid`='$beschikbaarheid',`opmerking`='$opmerking' WHERE id =" . $_GET['id']);
+
+    // Na het opslaan doorverwijzen
+    header("location: ?pagina=boten");
+    exit();
+}
 $result = mysqli_query($conn, "SELECT * FROM boten WHERE id =" . $_GET['id']);
 $result->fetch_assoc();
 
@@ -44,34 +66,9 @@ foreach ($result as $row) {
                 <textarea class="form-control" id="opmerking" rows="3" name="opmerking"><?= $row['opmerking']; ?></textarea>
             </div>
             <input type="submit" class="btn btn-primary" value="Opslaan" name="opslaan">
-            <input type="submit" class="btn btn-primary" value="Terug" name="terug">
+            <a href="?pagina=boten" class="btn btn-secondary"> Annuleren</a>
         </form>
     </div>
 <?php
-}
-
-
-
-/* This code block is checking if the "opslaan" button is pressed. If it is, it retrieves the values
-from the form fields (naam, minpassagiers, maxpassagiers, grootte, niveau, beschikbaarheid,
-opmerking) using the  superglobal. Then, it updates the corresponding row in the "boten" table
-in the database with the new values. Finally, it redirects the user to the "boten" page. */
-
-if (isset($_POST['opslaan'])) { // Controleer of het "opslaan" knop is ingedrukt
-        // Code specifiek voor de "Opslaan" knop
-        $naam = $_POST['naam'];
-        $minpassagiers = $_POST['minpassagiers'];
-        $maxpassagiers = $_POST['maxpassagiers'];
-        $grootte = $_POST['grootte'];
-        $niveau = $_POST['niveau'];
-        $beschikbaarheid = $_POST['beschikbaarheid'];
-        $opmerking = $_POST['opmerking'];
-
-        // Update de boot waar de ID, de ID is van de boot die je hebt aangeklikt
-        mysqli_query($conn, "UPDATE `boten` SET `naam`= '$naam',`minpassagiers`='$minpassagiers',`maxpassagiers`='$maxpassagiers',`grootte`='$grootte',`niveau`='$niveau',`beschikbaarheid`='$beschikbaarheid',`opmerking`='$opmerking' WHERE id =" . $_GET['id']);
-
-        // Na het opslaan doorverwijzen
-        header("location: ?pagina=boten");
-        exit();
 }
 ?>

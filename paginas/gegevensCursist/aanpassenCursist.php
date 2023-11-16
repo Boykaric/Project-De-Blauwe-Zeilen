@@ -46,8 +46,8 @@
 
                 </div>
                 <div style="margin-top:10px;">
-                    <button type="submit" class="btn btn-secondary">Annuleren</button>
                     <input type="submit" class="btn btn-primary" value="Opslaan" name='aanpassenCursist'>
+                    <a href="?pagina=gegevensOverzichtCursist" class="btn btn-secondary"> Annuleren</a>
                 </div>
             </form>
         </div>

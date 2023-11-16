@@ -111,5 +111,6 @@ if (isset($_POST['opslaan'])) {
 
         ?>
         <button type="submit" name="opslaan" value="Opslaan" class="btn btn-primary">Opslaan</button>
+        <a href="?pagina=beherenGebruikers" class="btn btn-secondary"> Annuleren</a>
     </form>
 </div>
